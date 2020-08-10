@@ -38,8 +38,8 @@ if [ $? -ne 0 ]; then
   exit 1;
 fi
 # Install requirements
-echo "Installing requiredsudo rm - packages..."
-sudo apt-get install python3-distutils python2-dev python3-dev
+echo "Installing required packages..."
+sudo apt-get install -y python3-distutils python2-dev python3-dev
 
 # Make sure pip and virtualenv are installed. Install using python2 as this is more reliable.
 echo "Installing pip..."
