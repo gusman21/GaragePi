@@ -31,14 +31,15 @@ echo "Installing GaragePi"
 echo "-------------------"
 
 # Make sure we can update packages first. We'll need to install lighttpd later on.
-if [ "$1" != "NO_APT_UPDATE" ]; then
-  echo "Updating packages..."
-  sudo apt-get update -q
-  if [ $? -ne 0 ]; then
+echo "Updating packages..."
+sudo apt-get update -q
+if [ $? -ne 0 ]; then
     echo "Failed to update packages. Check your internet connection."
-    exit 1;
-  fi
+  exit 1;
 fi
+# Install requirements
+echo "Installing requiredsudo rm - packages..."
+sudo apt-get install python3-distutils python2-dev python3-dev
 
 # Make sure pip and virtualenv are installed. Install using python2 as this is more reliable.
 echo "Installing pip..."
