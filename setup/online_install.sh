@@ -24,6 +24,6 @@ else
   echo -e "\nCalling the setup script..."
   cd ~/garage_pi
   chmod -v +x setup/setup.sh
-  ./setup/setup.sh NO_APT_UPDATE
+  ./setup/setup.sh 
 
 fi
